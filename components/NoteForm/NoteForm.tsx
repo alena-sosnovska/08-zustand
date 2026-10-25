@@ -25,10 +25,6 @@ const NoteForm = () => {
     },
   });
 
-  // const handleCreateNote = (newNote: NewNote) => {
-  //   mutate(newNote);
-  // };
-
   const handleCancel = () => {
     router.push('/notes/filter/all');
   };
@@ -41,7 +37,7 @@ const NoteForm = () => {
   return (
     <form className={css.form} action={handleSubmit}>
       <div className={css.formGroup}>
-        <label className="{css.label}">Title</label>
+        <label className={css.label}>Title</label>
         <input
           type="text"
           name="title"
@@ -49,11 +45,10 @@ const NoteForm = () => {
           defaultValue={draft?.title}
           onChange={handleChange}
         />
-        {/* <ErrorMessage name="title" component="span" className={css.error} /> */}
       </div>
 
       <div className={css.formGroup}>
-        <label className="{css.label}">Content</label>
+        <label className={css.label}>Content</label>
         <textarea
           name="content"
           rows={8}
@@ -61,11 +56,10 @@ const NoteForm = () => {
           defaultValue={draft?.content}
           onChange={handleChange}
         />
-        {/* <ErrorMessage name="content" component="span" className={css.error} /> */}
       </div>
 
       <div className={css.formGroup}>
-        <label className="{css.label}">Tag</label>
+        <label className={css.label}>Tag</label>
         <select name="tag" className={css.select} defaultValue={draft?.tag} onChange={handleChange}>
           <option value="Todo">Todo</option>
           <option value="Work">Work</option>
@@ -73,7 +67,6 @@ const NoteForm = () => {
           <option value="Meeting">Meeting</option>
           <option value="Shopping">Shopping</option>
         </select>
-        {/* <ErrorMessage name="tag" component="span" className={css.error} /> */}
       </div>
 
       <div className={css.actions}>
